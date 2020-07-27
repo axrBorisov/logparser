@@ -69,16 +69,16 @@ class LogParser
         $baidu = stripos($userAgent, "baidu");
         $yandex = stripos($userAgent, "yandex");
 
-        if ($google) {
+        if ($google !== false) {
             ++$this->formattedLogData['crawlers']['Google'];
         }
-        if ($bing) {
+        if ($bing !== false) {
             ++$this->formattedLogData['crawlers']['Bing'];
         }
-        if ($baidu) {
+        if ($baidu !== false) {
             ++$this->formattedLogData['crawlers']['Baidu'];
         }
-        if ($yandex) {
+        if ($yandex !== false) {
             ++$this->formattedLogData['crawlers']['Yandex'];
         }
 
